@@ -1,0 +1,75 @@
+import { Container, Grid, TextField, FormControl, InputLabel, Select, MenuItem } from "@mui/material";
+import './style.css'
+
+export const AddAccountPage = () => {
+    return (
+        <Container maxWidth="xl" className='add-account-container'>
+            <Grid container className='add-account-grid-con'>
+                <Grid item className='add-account-grid-item'>
+                    <h4>Add Account</h4>
+                    <form>
+                        <div className='add-account-form'>
+                            <TextField id="outlined-basic" label="Account Number" variant="outlined"
+                                       className='add-account-input'
+                                       sx={ {borderColor: 'var(--secondary-color)', width: '50%'} }/>
+                            <FormControl className='add-account-select' sx={ {
+                                '& .MuiOutlinedInput-root': {
+                                    '& fieldset': {
+                                        borderColor: 'var(--secondary-color)',
+                                    },
+                                    '&:hover fieldset': {
+                                        borderColor: 'var(--secondary-color)',
+                                    },
+                                    '&.Mui-focused fieldset': {
+                                        borderColor: 'var(--secondary-color)',
+                                    },
+                                },
+                            } }>
+                                <InputLabel id="demo-simple-select-label">Bank</InputLabel>
+                                <Select
+                                    labelId="demo-simple-select-label"
+                                    id="demo-simple-select"
+                                    label="Age"
+                                >
+                                    <MenuItem value={ 10 }>Ten</MenuItem>
+                                    <MenuItem value={ 20 }>Twenty</MenuItem>
+                                    <MenuItem value={ 30 }>Thirty</MenuItem>
+                                </Select>
+                            </FormControl>
+                        </div>
+                        <div className='add-account-form'>
+                            <TextField id="outlined-basic" label="Last Name" variant="outlined"
+                                       className='add-account-input'
+                                       sx={ {borderColor: 'var(--secondary-color)', width: '50%'} }/>
+                            <TextField id="outlined-basic" label="Phone Number" variant="outlined"
+                                       className='add-account-input'
+                                       sx={ {borderColor: 'var(--secondary-color)', width: '50%'} }/>
+                        </div>
+                        <div className='add-account-form'>
+                            <TextField id="outlined-basic" label="Group" variant="outlined"
+                                       className='add-account-input'
+                                       sx={ {borderColor: 'var(--secondary-color)', width: '50%'} }/>
+                            <TextField id="outlined-basic" label="Device ID" variant="outlined"
+                                       className='add-account-input'
+                                       sx={ {borderColor: 'var(--secondary-color)', width: '50%'} }/>
+                        </div>
+                        <div className='add-account-form'>
+                            <TextField id="outlined-basic" label="Sim Slot" variant="outlined"
+                                       className='add-account-input'
+                                       sx={ {borderColor: 'var(--secondary-color)', width: '50%'} }/>
+                            <TextField id="outlined-basic" label="Initsial balance of total expences" variant="outlined"
+                                       className='add-account-input'
+                                       sx={ {borderColor: 'var(--secondary-color)', width: '50%'} }/>
+                        </div>
+                        <TextField id="outlined-basic" label="Card Numbers (Last 4 digits)" variant="outlined"
+                                   className='add-account-input'
+                                   sx={ {borderColor: 'var(--secondary-color)', width: '100%', marginTop: '20px'} }/>
+                        <div className='add-account-text-area'>
+                            <textarea rows="9" placeholder='Additional Info'/>
+                        </div>
+                    </form>
+                </Grid>
+            </Grid>
+        </Container>
+    );
+};
