@@ -1,11 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
-import { AddAccountPage } from "@/pages/add-account";
+import { AccountsPage } from "@/pages/accounts";
 
 
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <AddAccountPage/>,
+        element: <AccountsPage/>,
     }
 ])
 

@@ -1,0 +1,15 @@
+.account-header {
+    margin-top: 30px;
+}
+
+.account-header-button{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.account-header-button span{
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+}
