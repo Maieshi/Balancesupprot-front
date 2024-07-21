@@ -44,7 +44,7 @@ export const AddAccountPage = () => {
                                 <Select
                                     labelId="demo-simple-select-label"
                                     id="demo-simple-select"
-                                    label="Age"
+                                    label="Bank"
                                 >
                                     <MenuItem value={ 10 }>Ten</MenuItem>
                                     <MenuItem value={ 20 }>Twenty</MenuItem>
