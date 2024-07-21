@@ -2,14 +2,25 @@
     margin-top: 30px;
 }
 
-.account-header-button{
+.account-header-button {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.account-header-button span{
+.account-header-button span {
     color: white;
     font-size: 25px;
     font-weight: 700;
+}
+
+.add-account {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 10px;
+    background: #ffffff;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
 }
