@@ -1,6 +1,6 @@
 import { Container } from "@mui/material";
 import { HeaderComponent } from "@/widgets/header";
-import { AccountHeader } from "@/widgets/account";
+import { AccountHeader,AccountTable } from "@/widgets/account";
 
 import './style.css'
 
@@ -9,6 +9,7 @@ export const AccountsPage = () => {
         <Container maxWidth="xl" className='account-container'>
             <HeaderComponent/>
             <AccountHeader/>
+            <AccountTable/>
         </Container>
     );
 };

@@ -59,11 +59,11 @@
     border: 1px solid #0cd2f7;
 }
 
-.balance-info h5 {
+.balance-info h5{
     color: #4d5762;
 }
 
-.balance-icon-green {
+.balance-icon-green{
     width: 50px;
     height: 50px;
     display: flex;
@@ -73,37 +73,8 @@
     border: 1px solid #7cd083;
 }
 
-.account-table {
-    width: 100%;
+.account-table{
     margin-top: 20px;
-    background: var(--primary-color);
-}
-
-.account-table table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.account-table table thead {
-    background: #262729;
-}
-
-.account-table table thead th {
-    text-align: start;
-    padding: 20px;
-    color: #bac3ca;
-    text-wrap: wrap;
-    white-space: nowrap;
-}
-
-
-.account-table table tbody tr td {
-    border-bottom: 1px solid #4d5762;
-    padding: 10px 20px;
-}
-
-.account-table table tbody tr td button{
-    cursor: pointer;
-    background: transparent;
-    border: none;
+    color: var(--secondary-color);
+    background: #25282b;
 }
