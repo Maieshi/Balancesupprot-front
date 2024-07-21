@@ -1,12 +1,27 @@
-import { Container, Grid, TextField, FormControl, InputLabel, Select, MenuItem } from "@mui/material";
+import { Modal, Grid, TextField, FormControl, InputLabel, Select, MenuItem } from "@mui/material";
+import { useSelector, useDispatch } from "react-redux";
+import { close } from "@/shared/utils";
+import { openModal } from '@/features/add-account/modal/modal.js'
 import './style.css'
 
 export const AddAccountPage = () => {
+    const dispatch = useDispatch();
+    const modal = useSelector( ( state ) => state.addAccount.addAccount );
     return (
-        <Container maxWidth="xl" className='add-account-container'>
+        <Modal
+            open={ modal }
+            sx={ {width: '50%'} }
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+        >
             <Grid container className='add-account-grid-con'>
                 <Grid item className='add-account-grid-item'>
-                    <h4>Add Account</h4>
+                    <div className='add-account-grid-header'>
+                        <h4>Add Account</h4>
+                        <button onClick={ () => dispatch( openModal( false ) ) }>
+                            <img src={ close } alt="close"/>
+                        </button>
+                    </div>
                     <form>
                         <div className='add-account-form'>
                             <TextField id="outlined-basic" label="Account Number" variant="outlined"
@@ -70,6 +85,6 @@ export const AddAccountPage = () => {
                     </form>
                 </Grid>
             </Grid>
-        </Container>
+        </Modal>
     );
 };
