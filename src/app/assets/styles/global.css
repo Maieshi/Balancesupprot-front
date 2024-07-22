@@ -4,9 +4,14 @@
     box-sizing: border-box;
 }
 
+body {
+    height: 100vh;
+    background: var(--primary-color-dark);
+}
 
 :root {
     --primary-color: #1f2021;
     --secondary-color: #666666;
     --primary-color-dark: #181818;
 }
+
