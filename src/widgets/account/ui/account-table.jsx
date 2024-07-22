@@ -3,7 +3,7 @@ import { action, prev, next } from '@/shared/utils'
 
 const AccountTable = () => {
 
-    const account = [ 1, 2, 3, 4, 5, 6 ]
+    const account = [ 1, 2, 3, 4, 5, 6,7,9,9 ]
 
     return (
         <>

@@ -9,7 +9,7 @@ import next from './icon/next.svg'
 import settings from './icon/settings.svg'
 import account from './icon/account.svg'
 import messages from './icon/messages.svg'
-
+import check from './icon/check.svg'
 
 export {
     menu,
@@ -22,5 +22,6 @@ export {
     next,
     settings,
     account,
-    messages
+    messages,
+    check
 }

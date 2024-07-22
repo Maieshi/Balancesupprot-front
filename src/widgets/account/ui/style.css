@@ -76,22 +76,24 @@
 .account-table {
     width: 100%;
     height: 400px;
-    overflow-y: scroll;
-    overflow-x: auto;
+    overflow: auto;
     margin-top: 20px;
     background: var(--primary-color);
+}
+
+.account-table::-webkit-scrollbar-track-piece:start {
+    background: transparent;
+    margin-top: 65px;
 }
 
 .account-table::-webkit-scrollbar {
     width: 10px;
     height: 10px;
-    /*width: 0;*/
-    /*height: 0; */
-    /*background: transparent;*/
+    background: transparent;
 }
 
 .account-table::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: transparent;
 }
 
 .account-table::-webkit-scrollbar-thumb {

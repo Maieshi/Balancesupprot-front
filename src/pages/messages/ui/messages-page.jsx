@@ -7,7 +7,7 @@ export const MessagesPage = () => {
         <Container maxWidth="xl" className='account-container'>
             <HeaderComponent/>
             <MessageHeader/>
-            {/*<MessageTable/>*/}
+            <MessageTable/>
         </Container>
     );
 };
