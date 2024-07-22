@@ -18,7 +18,6 @@ export const {addAccount} = AddAccountSlice.actions;
 
 export const openModal = ( handle ) => ( dispatch ) => {
     dispatch( addAccount( handle ) );
-    return handle;
 }
 
 

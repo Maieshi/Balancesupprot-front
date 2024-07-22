@@ -10,6 +10,9 @@ export const AddAccountPage = () => {
     return (
         <Modal
             open={ modal }
+            onClose={ () => {
+                dispatch( openModal( false ) )
+            } }
             sx={ {width: '50%'} }
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
@@ -18,9 +21,6 @@ export const AddAccountPage = () => {
                 <Grid item className='add-account-grid-item'>
                     <div className='add-account-grid-header'>
                         <h4>Add Account</h4>
-                        <button onClick={ () => dispatch( openModal( false ) ) }>
-                            <img src={ close } alt="close"/>
-                        </button>
                     </div>
                     <form>
                         <div className='add-account-form'>

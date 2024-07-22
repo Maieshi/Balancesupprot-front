@@ -2,6 +2,8 @@ import { Drawer, MenuList, MenuItem, ListItemIcon, ListItemText } from "@mui/mat
 import { account, messages, settings } from '@/shared/utils'
 import './style.css'
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { openMenu } from "../modal/modal.js";
 
 const sxStyle = {
     '&:hover': {
@@ -12,12 +14,15 @@ const sxStyle = {
 }
 
 export const MenuDrawer = () => {
+    const dispatch = useDispatch();
+    const menu = useSelector( state => state.menu.open )
+
     return (
         <Drawer
             anchor='left'
-            open={ true }
+            open={ menu }
             onClose={ () => {
-                console.log( 'hi' )
+                dispatch( openMenu( false ) )
             } }
             sx={ {
                 "& .MuiPaper-root ": {
