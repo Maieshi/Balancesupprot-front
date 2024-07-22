@@ -6,6 +6,9 @@ import moneyGreen from './images/money-green.svg'
 import action from './icon/action.svg'
 import prev from './icon/prev.svg'
 import next from './icon/next.svg'
+import settings from './icon/settings.svg'
+import account from './icon/account.svg'
+import messages from './icon/messages.svg'
 
 
 export {
@@ -16,5 +19,8 @@ export {
     moneyGreen,
     action,
     prev,
-    next
+    next,
+    settings,
+    account,
+    messages
 }

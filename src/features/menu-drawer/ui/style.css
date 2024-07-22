@@ -1,0 +1,12 @@
+.menu{
+    width: 250px;
+    padding: 20px;
+}
+
+.menu-content{
+    width: 100%;
+}
+
+.menu-item{
+    color: white;
+}
