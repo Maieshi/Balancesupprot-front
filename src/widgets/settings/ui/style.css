@@ -1,0 +1,9 @@
+.tab-bar {
+    margin-top: 20px;
+}
+
+.tab-bar .add-account-grid-con {
+    width: 50% !important;
+    background-color: transparent !important;
+    position: unset !important;
+}
