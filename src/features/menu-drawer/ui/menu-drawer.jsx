@@ -33,7 +33,7 @@ export const MenuDrawer = () => {
             <div className='menu'>
                 <div className="menu-content">
                     <MenuList>
-                        <Link to='/'>
+                        <Link to='/' onClick={ () => dispatch( openMenu( false ) ) }>
                             <MenuItem sx={ sxStyle }>
                                 <ListItemIcon>
                                     <img src={ account } alt="account"/>
@@ -41,7 +41,7 @@ export const MenuDrawer = () => {
                                 <ListItemText>Account</ListItemText>
                             </MenuItem>
                         </Link>
-                        <Link to='/messages'>
+                        <Link to='/messages' onClick={ () => dispatch( openMenu( false ) ) }>
                             <MenuItem sx={ sxStyle }>
                                 <ListItemIcon>
                                     <img src={ messages } alt="messages"/>
@@ -49,7 +49,7 @@ export const MenuDrawer = () => {
                                 <ListItemText>Message</ListItemText>
                             </MenuItem>
                         </Link>
-                        <Link to='/settings'>
+                        <Link to='/settings' onClick={ () => dispatch( openMenu( false ) ) }>
                             <MenuItem sx={ sxStyle }>
                                 <ListItemIcon>
                                     <img src={ settings } alt="settings"/>
