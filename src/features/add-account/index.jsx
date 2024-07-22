@@ -1,1 +1,1 @@
-export { AddAccountPage } from './ui/add-account-page.jsx';
+export { AddAccountModal } from './ui/add-account-modal.jsx';

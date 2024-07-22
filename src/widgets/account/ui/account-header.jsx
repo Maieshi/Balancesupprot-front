@@ -1,5 +1,5 @@
 import { plus, moneyGreen, moneyBlue } from '@/shared/utils'
-import { AddAccountPage } from "@/features/add-account";
+import { AddAccountModal } from "@/features/add-account";
 import { useDispatch } from "react-redux";
 import { openModal } from '@/features/add-account/modal/modal.js'
 
@@ -19,7 +19,7 @@ const AccountHeader = () => {
                     </button>
                 </div>
             </div>
-            <AddAccountPage/>
+            <AddAccountModal/>
             <div className="account-filter">
                 <div className="account-info">
                     <div className="balance">
