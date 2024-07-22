@@ -4,6 +4,9 @@ import close from './icon/close.svg'
 import moneyBlue from './images/money-blue.svg'
 import moneyGreen from './images/money-green.svg'
 import action from './icon/action.svg'
+import prev from './icon/prev.svg'
+import next from './icon/next.svg'
+
 
 export {
     menu,
@@ -11,5 +14,7 @@ export {
     close,
     moneyBlue,
     moneyGreen,
-    action
+    action,
+    prev,
+    next
 }
