@@ -1,80 +1,25 @@
-.account-header {
-    margin-top: 30px;
-}
-
-.account-header-button {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.account-header-button span {
-    color: white;
-    font-size: 25px;
-    font-weight: 700;
-}
-
-.add-account {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 5px 10px;
-    background: #ffffff;
-    border-radius: 10px;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.account-filter {
+.message-filter {
     margin-top: 20px;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding: 20px;
     background: var(--primary-color);
 }
 
-.account-info {
+.message-filter-inputs {
     display: flex;
     align-items: center;
     gap: 20px;
+    /*justify-content: space-between;*/
 }
 
-.balance {
-    background: #25282b;
-    padding: 10px 40px 10px 10px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.balance-icon {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    border: 1px solid #0cd2f7;
-}
-
-.balance-info h5{
-    color: #4d5762;
-}
-
-.balance-icon-green{
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    border: 1px solid #7cd083;
-}
-
-.account-table{
+.message-reset {
     margin-top: 20px;
-    color: var(--secondary-color);
-    background: #25282b;
+}
+
+.message-reset button {
+    color: #fff;
+    background: transparent;
+    padding:10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid var(--secondary-color);
 }

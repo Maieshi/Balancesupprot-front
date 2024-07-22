@@ -1,8 +1,12 @@
 import { Modal, Grid, TextField, FormControl, InputLabel, Select, MenuItem } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
-import { close } from "@/shared/utils";
 import { openModal } from '@/features/add-account/modal/modal.js'
 import './style.css'
+
+const sxStyle = {
+    borderColor: 'var(--secondary-color)',
+    width: '50%'
+}
 
 export const AddAccountPage = () => {
     const dispatch = useDispatch();
@@ -26,7 +30,7 @@ export const AddAccountPage = () => {
                         <div className='add-account-form'>
                             <TextField id="outlined-basic" label="Account Number" variant="outlined"
                                        className='add-account-input'
-                                       sx={ {borderColor: 'var(--secondary-color)', width: '50%'} }/>
+                                       sx={ sxStyle }/>
                             <FormControl className='add-account-select' sx={ {
                                 '& .MuiOutlinedInput-root': {
                                     '& fieldset': {
@@ -55,26 +59,26 @@ export const AddAccountPage = () => {
                         <div className='add-account-form'>
                             <TextField id="outlined-basic" label="Last Name" variant="outlined"
                                        className='add-account-input'
-                                       sx={ {borderColor: 'var(--secondary-color)', width: '50%'} }/>
+                                       sx={ sxStyle }/>
                             <TextField id="outlined-basic" label="Phone Number" variant="outlined"
                                        className='add-account-input'
-                                       sx={ {borderColor: 'var(--secondary-color)', width: '50%'} }/>
+                                       sx={ sxStyle }/>
                         </div>
                         <div className='add-account-form'>
                             <TextField id="outlined-basic" label="Group" variant="outlined"
                                        className='add-account-input'
-                                       sx={ {borderColor: 'var(--secondary-color)', width: '50%'} }/>
+                                       sx={ sxStyle }/>
                             <TextField id="outlined-basic" label="Device ID" variant="outlined"
                                        className='add-account-input'
-                                       sx={ {borderColor: 'var(--secondary-color)', width: '50%'} }/>
+                                       sx={ sxStyle }/>
                         </div>
                         <div className='add-account-form'>
                             <TextField id="outlined-basic" label="Sim Slot" variant="outlined"
                                        className='add-account-input'
-                                       sx={ {borderColor: 'var(--secondary-color)', width: '50%'} }/>
+                                       sx={ sxStyle }/>
                             <TextField id="outlined-basic" label="Initsial balance of total expences" variant="outlined"
                                        className='add-account-input'
-                                       sx={ {borderColor: 'var(--secondary-color)', width: '50%'} }/>
+                                       sx={ sxStyle }/>
                         </div>
                         <TextField id="outlined-basic" label="Card Numbers (Last 4 digits)" variant="outlined"
                                    className='add-account-input'
