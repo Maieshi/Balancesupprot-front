@@ -85,6 +85,13 @@
     background: transparent;
     margin-top: 65px;
 }
+.account-table::-webkit-scrollbar-track-piece:end {
+    background: transparent;
+}
+
+.account-table::-webkit-scrollbar-corner {
+    background-color: transparent ;
+}
 
 .account-table::-webkit-scrollbar {
     width: 10px;
