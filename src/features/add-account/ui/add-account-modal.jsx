@@ -8,6 +8,7 @@ export const AddAccountModal = () => {
     const modal = useSelector( ( state ) => state.addAccount.addAccount );
     return (
         <>
+            {/*<div className='add-account-modal'>*/ }
             <Modal
                 disableEnforceFocus
                 open={ modal }
@@ -22,7 +23,9 @@ export const AddAccountModal = () => {
                     <AddAccountPage/>
                 </>
             </Modal>
+            {/*</div>*/ }
         </>
-    );
+    )
+        ;
 };
 

@@ -4,17 +4,19 @@ import { Menu, MenuItem } from "@mui/material";
 import { useState } from "react";
 
 const AccountTable = () => {
-
     const account = [ 1, 2, 3, 4, 5, 6, 7, 9, 9 ]
+
     const [ anchorEl, setAnchorEl ] = useState( null );
+
     const open = Boolean( anchorEl );
+
     const handleClick = ( event ) => {
         setAnchorEl( event.currentTarget );
     };
+
     const handleClose = () => {
         setAnchorEl( null );
     };
-
     return (
         <>
             <div className='account-table'>
