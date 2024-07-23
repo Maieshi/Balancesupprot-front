@@ -12,7 +12,7 @@ const sxStyle = {
         xl: '50%'
     },
     left: {
-        xs: '-65px',
+        xs: '-20%',
         sm: 0,
         md: 0,
         lg: 0,
