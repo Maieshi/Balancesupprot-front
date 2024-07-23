@@ -46,6 +46,10 @@
     background: transparent;
 }
 
+.message-table::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
 .message-table::-webkit-scrollbar-thumb {
     background: #888;
 }
