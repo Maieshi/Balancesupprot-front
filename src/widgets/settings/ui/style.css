@@ -11,3 +11,10 @@
 .tab-bar .add-account-grid-item {
     padding: 0 !important;
 }
+
+
+@media screen and (max-width: 600px) {
+    .tab-bar .add-account-grid-con {
+        width: 100% !important;
+    }
+}

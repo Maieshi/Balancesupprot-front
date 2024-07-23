@@ -40,7 +40,7 @@
     justify-content: space-between;
 }
 
-.add-account-grid-header button{
+.add-account-grid-header button {
     background: transparent;
     border: none;
     cursor: pointer;
@@ -108,7 +108,19 @@
     outline: none;
 }
 
-.add-account-modal{
+.add-account-modal {
     height: 80vh;
     overflow: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .add-account-form {
+        flex-direction: column;
+    }
+
+    .add-account-input,
+    .add-account-select {
+        width: 100% !important;
+    }
+
 }
