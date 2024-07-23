@@ -1,9 +1,19 @@
 import './style.css'
 import { action, prev, next } from '@/shared/utils'
+import { Menu, MenuItem } from "@mui/material";
+import { useState } from "react";
 
 const AccountTable = () => {
 
-    const account = [ 1, 2, 3, 4, 5, 6,7,9,9 ]
+    const account = [ 1, 2, 3, 4, 5, 6, 7, 9, 9 ]
+    const [ anchorEl, setAnchorEl ] = useState( null );
+    const open = Boolean( anchorEl );
+    const handleClick = ( event ) => {
+        setAnchorEl( event.currentTarget );
+    };
+    const handleClose = () => {
+        setAnchorEl( null );
+    };
 
     return (
         <>
@@ -42,9 +52,28 @@ const AccountTable = () => {
                             <td>02.01.2024 11:50</td>
                             <td></td>
                             <td>
-                                <button>
+                                <button
+                                    id="basic-button"
+                                    aria-controls={ open ? 'basic-menu' : undefined }
+                                    aria-haspopup="true"
+                                    aria-expanded={ open ? 'true' : undefined }
+                                    onClick={ handleClick }
+                                >
                                     <img src={ action } alt="action"/>
                                 </button>
+                                <Menu
+                                    id="basic-menu"
+                                    anchorEl={ anchorEl }
+                                    open={ open }
+                                    onClose={ handleClose }
+                                    MenuListProps={ {
+                                        'aria-labelledby': 'basic-button',
+                                    } }
+                                >
+                                    <MenuItem onClick={ handleClose }>Profile</MenuItem>
+                                    <MenuItem onClick={ handleClose }>My account</MenuItem>
+                                    <MenuItem onClick={ handleClose }>Logout</MenuItem>
+                                </Menu>
                             </td>
                         </tr>
                     ) ) }

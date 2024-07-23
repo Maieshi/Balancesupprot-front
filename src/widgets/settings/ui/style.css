@@ -7,3 +7,7 @@
     background-color: transparent !important;
     position: unset !important;
 }
+
+.tab-bar .add-account-grid-item {
+    padding: 0 !important;
+}
