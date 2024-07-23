@@ -22,25 +22,24 @@ const sxStyle = {
 
 export const AddAccountModal = () => {
     const dispatch = useDispatch();
+
     const modal = useSelector( ( state ) => state.addAccount.addAccount );
+
     return (
         <>
-            <Modal
-                disableEnforceFocus
-                open={ modal }
-                onClose={ () => {
-                    dispatch( openModal( false ) )
-                } }
-                sx={ sxStyle }
-                aria-labelledby="modal-modal-title"
-                aria-describedby="modal-modal-description"
-            >
+            <Modal disableEnforceFocus
+                   open={ modal }
+                   onClose={ () => {
+                       dispatch( openModal( false ) )
+                   } }
+                   sx={ sxStyle }
+                   aria-labelledby="modal-modal-title"
+                   aria-describedby="modal-modal-description">
                 <>
                     <AddAccountPage/>
                 </>
             </Modal>
         </>
-    )
-        ;
+    );
 };
 
