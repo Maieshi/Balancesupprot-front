@@ -64,6 +64,12 @@ const AccountTable = () => {
                                     <img src={ action } alt="action"/>
                                 </button>
                                 <Menu
+                                    sx={ {
+                                        '& .MuiPaper-root ': {
+                                            background: "var(--primary-color)",
+                                            color: "#fff"
+                                        }
+                                    } }
                                     id="basic-menu"
                                     anchorEl={ anchorEl }
                                     open={ open }

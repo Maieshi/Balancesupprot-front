@@ -4,17 +4,17 @@ import { MenuDrawer } from "@/features/menu-drawer";
 import { useDispatch } from 'react-redux'
 import { openModal } from "@/features/menu-drawer/modal/modal.js";
 import { useState } from "react";
-import { Menu,MenuItem } from "@mui/material";
+import { Menu, MenuItem } from "@mui/material";
 
 export const HeaderComponent = () => {
     const dispatch = useDispatch()
-    const [anchorEl, setAnchorEl] = useState(null);
-    const open = Boolean(anchorEl);
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
+    const [ anchorEl, setAnchorEl ] = useState( null );
+    const open = Boolean( anchorEl );
+    const handleClick = ( event ) => {
+        setAnchorEl( event.currentTarget );
     };
     const handleClose = () => {
-        setAnchorEl(null);
+        setAnchorEl( null );
     };
     return (
         <>
@@ -24,25 +24,31 @@ export const HeaderComponent = () => {
                 </button>
                 <button
                     id="basic-button"
-                    aria-controls={open ? 'basic-menu' : undefined}
+                    aria-controls={ open ? 'basic-menu' : undefined }
                     aria-haspopup="true"
-                    aria-expanded={open ? 'true' : undefined}
-                    onClick={handleClick}
+                    aria-expanded={ open ? 'true' : undefined }
+                    onClick={ handleClick }
                     className='profile'>
                     S
                 </button>
                 <Menu
+                    sx={ {
+                        '& .MuiPaper-root ': {
+                            background: "var(--primary-color)",
+                            color: "#fff"
+                        }
+                    } }
                     id="basic-menu"
-                    anchorEl={anchorEl}
-                    open={open}
-                    onClose={handleClose}
-                    MenuListProps={{
+                    anchorEl={ anchorEl }
+                    open={ open }
+                    onClose={ handleClose }
+                    MenuListProps={ {
                         'aria-labelledby': 'basic-button',
-                    }}
+                    } }
                 >
-                    <MenuItem onClick={handleClose}>Profile</MenuItem>
-                    <MenuItem onClick={handleClose}>My account</MenuItem>
-                    <MenuItem onClick={handleClose}>Logout</MenuItem>
+                    <MenuItem onClick={ handleClose }>Profile</MenuItem>
+                    <MenuItem onClick={ handleClose }>My account</MenuItem>
+                    <MenuItem onClick={ handleClose }>Logout</MenuItem>
                 </Menu>
             </header>
             <MenuDrawer/>
