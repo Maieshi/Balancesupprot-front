@@ -50,7 +50,14 @@ const AccountTable = () => {
                             <td>12345678901</td>
                             <td>5000,6543</td>
                             <td>Sberbank</td>
-                            <td>T 12345 123,12</td>
+                            <td>
+                                <div className='T'>
+                                    <span>T</span> 12345 123,12
+                                </div>
+                                <div className='D'>
+                                    <span>D</span> 12345 123,12
+                                </div>
+                            </td>
                             <td>02.01.2024 11:50</td>
                             <td></td>
                             <td>

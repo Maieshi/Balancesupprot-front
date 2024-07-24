@@ -138,6 +138,19 @@
     white-space: nowrap;
 }
 
+
+.T span {
+    color: #6883ab;
+    font-weight: 700;
+    line-height: 25px;
+}
+
+.D span {
+    color: #6fba75;
+    font-weight: 700;
+    line-height: 25px;
+}
+
 .account-table table tbody tr td button {
     cursor: pointer;
     background: transparent;
