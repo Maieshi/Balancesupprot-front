@@ -28,7 +28,8 @@ const ariaProps = ( index ) => {
 }
 
 const sxStyle = {
-    color: '#fff'
+    color: '#fff',
+    borderBottomColor: '#fff',
 }
 
 const SettingsBody = () => {
@@ -39,14 +40,19 @@ const SettingsBody = () => {
     };
     return (
         <div className="tab-bar">
-            <Box sx={ {borderBottom: 1, borderColor: 'rgba(255,255,255,0.12)'} }>
+            <Box>
                 <Tabs
                     indicatorColor="primary"
                     textColor="inherit"
+                    sx={{
+                       '& .MuiTabs-indicator' : {
+                           background: '#fff',
+                       }
+                    }}
                     value={ value }
                     onChange={ handleChange }
                     aria-label="basic tabs example">
-                    <Tab sx={ sxStyle } label="Settings" { ...ariaProps( 0 ) } />
+                    <Tab sx={ sxStyle } label="General" { ...ariaProps( 0 ) } />
                     <Tab sx={ sxStyle } label="Notification" { ...ariaProps( 1 ) } />
                 </Tabs>
             </Box>
