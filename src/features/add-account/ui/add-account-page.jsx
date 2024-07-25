@@ -21,6 +21,24 @@ const sxStyle = {
     }
 }
 
+const sxNumberStyle = {
+    marginTop: '20px',
+    borderColor: 'var(--secondary-color)',
+    width: '50%',
+    '& .MuiOutlinedInput-root': {
+        borderColor: 'var(--border-color)',
+        color: '#fff',
+        borderRadius: 'var(--border-radius)',
+    },
+    '& .MuiOutlinedInput-notchedOutline': {
+        borderColor: 'var(--border-color)',
+    },
+    '& .Mui-Focused': {
+        color: '#fff',
+        borderColor: 'var(--border-color)'
+    }
+}
+
 export const AddAccountPage = () => {
     const dispatch = useDispatch();
     return (
@@ -88,7 +106,7 @@ export const AddAccountPage = () => {
                     </div>
                     <TextField id="outlined-basic" label="Card Numbers (Last 4 digits)" variant="outlined"
                                className='add-account-input'
-                               sx={ {borderColor: 'var(--secondary-color)', width: '100%', marginTop: '20px'} }/>
+                               sx={ sxNumberStyle }/>
                     <div className='add-account-text-area'>
                         <textarea rows="9" placeholder='Additional Info'/>
                     </div>
