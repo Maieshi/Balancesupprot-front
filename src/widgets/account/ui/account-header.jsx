@@ -4,10 +4,36 @@ import { useDispatch } from "react-redux";
 import { openModal } from '@/features/add-account/modal/modal.js'
 
 import './style.css'
-import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+import { FormControl, InputLabel, MenuItem, Select,Checkbox,OutlinedInput,ListItemText } from "@mui/material";
+import { useState } from "react";
+
+const names = [
+    'Oliver Hansen',
+    'Van Henry',
+    'April Tucker',
+    'Ralph Hubbard',
+    'Omar Alexander',
+    'Carlos Abbott',
+    'Miriam Wagner',
+    'Bradley Wilkerson',
+    'Virginia Andrews',
+    'Kelly Snyder',
+];
 
 const AccountHeader = () => {
     const dispatch = useDispatch();
+
+    const [personName, setPersonName] = useState([]);
+
+    const handleChange = (event) => {
+        const {
+            target: { value },
+        } = event;
+        setPersonName(
+            typeof value === 'string' ? value.split(',') : value,
+        );
+    };
+
     return (
         <>
             <div className="account-header">
@@ -60,13 +86,28 @@ const AccountHeader = () => {
                     } }>
                         <InputLabel id="demo-simple-select-label">Group</InputLabel>
                         <Select
-                            labelId="demo-simple-select-label"
-                            id="demo-simple-select"
-                            label="Group"
+                            labelId="demo-multiple-checkbox-label"
+                            id="demo-multiple-checkbox"
+                            multiple
+                            value={personName}
+                            onChange={handleChange}
+                            input={<OutlinedInput label="Tag" />}
+                            renderValue={(selected) => selected.join(', ')}
+                            MenuProps={ {
+                                PaperProps: {
+                                    sx: {
+                                        color: "white",
+                                        bgcolor: 'var(--primary-color)',
+                                    },
+                                },
+                            } }
                         >
-                            <MenuItem value={ 10 }>Ten</MenuItem>
-                            <MenuItem value={ 20 }>Twenty</MenuItem>
-                            <MenuItem value={ 30 }>Thirty</MenuItem>
+                            {names.map((name) => (
+                                <MenuItem key={name} value={name}>
+                                    <Checkbox checked={personName.indexOf(name) > -1} />
+                                    <ListItemText primary={name} />
+                                </MenuItem>
+                            ))}
                         </Select>
                     </FormControl>
                 </div>

@@ -70,6 +70,14 @@ const MessageHeader = () => {
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
                             label="Message Type"
+                            MenuProps={ {
+                                PaperProps: {
+                                    sx: {
+                                        color: "white",
+                                        bgcolor: 'var(--primary-color)',
+                                    },
+                                },
+                            } }
                         >
                             <MenuItem value={ 10 }>Out going</MenuItem>
                             <MenuItem value={ 20 }>Twenty</MenuItem>

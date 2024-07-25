@@ -24,7 +24,7 @@ const sxStyle = {
 const sxNumberStyle = {
     marginTop: '20px',
     borderColor: 'var(--secondary-color)',
-    width: '50%',
+    width: '100%',
     '& .MuiOutlinedInput-root': {
         borderColor: 'var(--border-color)',
         color: '#fff',
