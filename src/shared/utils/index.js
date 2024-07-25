@@ -16,8 +16,10 @@ import UserId from './dynamicIcon/userId.jsx'
 import NotifyIcon from './dynamicIcon/notifyIcon.jsx'
 import Visible from "./dynamicIcon/visible.jsx";
 import VisibleOff from "./dynamicIcon/visibleOff.jsx";
+import home from './icon/home.svg'
 
 export {
+    home,
     Visible,
     VisibleOff,
     UserId,

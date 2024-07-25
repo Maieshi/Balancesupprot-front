@@ -1,5 +1,5 @@
 import { Drawer, MenuList, MenuItem, ListItemIcon, ListItemText } from "@mui/material";
-import { account, messages, settings } from '@/shared/utils'
+import { account, messages, home } from '@/shared/utils'
 import './style.css'
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
@@ -7,7 +7,8 @@ import { openMenu } from "../modal/modal.js";
 
 const sxStyle = {
     '&:hover': {
-        backgroundColor: "rgba(255,255,255,0.1)",
+        backgroundColor: "rgba(202, 26, 61, 0.1)",
+        borderRadius: 'var(--border-radius)'
     },
     gap: '10px',
     color: '#fff'
@@ -36,9 +37,9 @@ export const MenuDrawer = () => {
                         <Link to='/' onClick={ () => dispatch( openMenu( false ) ) }>
                             <MenuItem sx={ sxStyle }>
                                 <ListItemIcon>
-                                    <img src={ account } alt="account"/>
+                                    <img src={ home } alt="account"/>
                                 </ListItemIcon>
-                                <ListItemText>Account</ListItemText>
+                                <ListItemText>Accounts</ListItemText>
                             </MenuItem>
                         </Link>
                         <Link to='/messages' onClick={ () => dispatch( openMenu( false ) ) }>
@@ -46,15 +47,15 @@ export const MenuDrawer = () => {
                                 <ListItemIcon>
                                     <img src={ messages } alt="messages"/>
                                 </ListItemIcon>
-                                <ListItemText>Message</ListItemText>
+                                <ListItemText>Messages</ListItemText>
                             </MenuItem>
                         </Link>
                         <Link to='/settings' onClick={ () => dispatch( openMenu( false ) ) }>
                             <MenuItem sx={ sxStyle }>
                                 <ListItemIcon>
-                                    <img src={ settings } alt="settings"/>
+                                    <img src={ account } alt="settings"/>
                                 </ListItemIcon>
-                                <ListItemText>Settings</ListItemText>
+                                <ListItemText>My Account</ListItemText>
                             </MenuItem>
                         </Link>
                     </MenuList>
