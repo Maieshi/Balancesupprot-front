@@ -65,14 +65,23 @@ export const AddAccountPage = () => {
                                 },
                                 '&.Mui-focused fieldset': {
                                     borderColor: 'var(--secondary-color)',
-                                },
+                                }
                             },
+
                         } }>
                             <InputLabel id="demo-simple-select-label">Bank</InputLabel>
                             <Select
                                 labelId="demo-simple-select-label"
                                 id="demo-simple-select"
                                 label="Bank"
+                                MenuProps={ {
+                                    PaperProps: {
+                                        sx: {
+                                            color: "white",
+                                            bgcolor: 'var(--primary-color)',
+                                        },
+                                    },
+                                } }
                             >
                                 <MenuItem value={ 10 }>Ten</MenuItem>
                                 <MenuItem value={ 20 }>Twenty</MenuItem>
