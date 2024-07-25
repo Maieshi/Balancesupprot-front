@@ -17,8 +17,13 @@ import NotifyIcon from './dynamicIcon/notifyIcon.jsx'
 import Visible from "./dynamicIcon/visible.jsx";
 import VisibleOff from "./dynamicIcon/visibleOff.jsx";
 import home from './icon/home.svg'
+import ArrowTop from './icon/arrow-top.svg'
+import ArrowDown from './icon/arrow-down.svg'
+
 
 export {
+    ArrowDown,
+    ArrowTop,
     home,
     Visible,
     VisibleOff,

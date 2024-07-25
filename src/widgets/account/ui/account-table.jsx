@@ -2,6 +2,24 @@ import './style.css'
 import { action, prev, next } from '@/shared/utils'
 import { Menu, MenuItem } from "@mui/material";
 import { useState } from "react";
+import { ArrowTop, ArrowDown } from '@/shared/utils'
+
+
+const th = [
+    'Account',
+    'Name',
+    'Balance',
+    'Group',
+    'Device',
+    'Slim sim',
+    'Phone',
+    'Card Numbers',
+    'Bank',
+    'Expenses',
+    'Update at',
+    'Info',
+    'Action'
+]
 
 const AccountTable = () => {
     const account = [ 1, 2, 3, 4, 5, 6, 7, 9, 9 ]
@@ -23,19 +41,14 @@ const AccountTable = () => {
                 <table>
                     <thead>
                     <tr>
-                        <th>Account</th>
-                        <th>Name</th>
-                        <th>Balance</th>
-                        <th>Group</th>
-                        <th>Device</th>
-                        <th>Slim sim</th>
-                        <th>Phone</th>
-                        <th>Card Numbers</th>
-                        <th>Bank</th>
-                        <th>Expenses</th>
-                        <th>Update at</th>
-                        <th>Info</th>
-                        <th>Action</th>
+                        {
+                            th.map( ( item, index ) => (
+                                <th key={ index }>
+                                    <img src={ ArrowTop } alt="ArrowTop"/>
+                                    { item }
+                                </th>
+                            ) )
+                        }
                     </tr>
                     </thead>
                     <tbody>
