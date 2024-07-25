@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { openModal } from '@/features/add-account/modal/modal.js'
 
 import './style.css'
-import { FormControl, InputLabel, MenuItem, Select,Checkbox,OutlinedInput,ListItemText } from "@mui/material";
+import { FormControl, InputLabel, MenuItem, Select, Checkbox, OutlinedInput, ListItemText } from "@mui/material";
 import { useState } from "react";
 
 const names = [
@@ -23,14 +23,14 @@ const names = [
 const AccountHeader = () => {
     const dispatch = useDispatch();
 
-    const [personName, setPersonName] = useState([]);
+    const [ personName, setPersonName ] = useState( [] );
 
-    const handleChange = (event) => {
+    const handleChange = ( event ) => {
         const {
-            target: { value },
+            target: {value},
         } = event;
         setPersonName(
-            typeof value === 'string' ? value.split(',') : value,
+            typeof value === 'string' ? value.split( ',' ) : value,
         );
     };
 
@@ -82,17 +82,17 @@ const AccountHeader = () => {
                                 borderColor: 'var(--secondary-color)',
                             },
                         },
-                        width:'200px'
+                        width: '200px'
                     } }>
                         <InputLabel id="demo-simple-select-label">Group</InputLabel>
                         <Select
                             labelId="demo-multiple-checkbox-label"
                             id="demo-multiple-checkbox"
                             multiple
-                            value={personName}
-                            onChange={handleChange}
-                            input={<OutlinedInput label="Tag" />}
-                            renderValue={(selected) => selected.join(', ')}
+                            value={ personName }
+                            onChange={ handleChange }
+                            input={ <OutlinedInput label="Tag"/> }
+                            renderValue={ ( selected ) => selected.join( ', ' ) }
                             MenuProps={ {
                                 PaperProps: {
                                     sx: {
@@ -102,12 +102,18 @@ const AccountHeader = () => {
                                 },
                             } }
                         >
-                            {names.map((name) => (
-                                <MenuItem key={name} value={name}>
-                                    <Checkbox checked={personName.indexOf(name) > -1} />
-                                    <ListItemText primary={name} />
+                            { names.map( ( name ) => (
+                                <MenuItem key={ name } value={ name }>
+                                    <Checkbox  sx={ {
+                                        '& .MuiSvgIcon-root':{
+                                            fill:"#fff"
+                                        },
+                                        borderColor: "#fff"
+                                    } }
+                                               checked={ personName.indexOf( name ) > -1 }/>
+                                    <ListItemText primary={ name }/>
                                 </MenuItem>
-                            ))}
+                            ) ) }
                         </Select>
                     </FormControl>
                 </div>

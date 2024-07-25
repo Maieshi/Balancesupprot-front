@@ -113,7 +113,7 @@ const AccountTable = () => {
                                 <Menu
                                     sx={ {
                                         '& .MuiPaper-root ': {
-                                            borderRadius:"var(--border-radius)",
+                                            borderRadius: "var(--border-radius)",
                                             background: "#262729",
                                             color: "#fff",
                                             boxShadow: "1px 1px 5px 5px rgba(0, 0, 0, 0.1);",
