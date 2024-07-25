@@ -1,8 +1,8 @@
 import './style.css'
 import { action, prev, next } from '@/shared/utils'
-import { Menu, MenuItem } from "@mui/material";
+import { Menu, MenuItem, ListItemIcon, ListItemText, IconButton } from "@mui/material";
 import { useState } from "react";
-import { ArrowTop, ArrowDown } from '@/shared/utils'
+import { ArrowTop, ArrowDown, Delete, edit, reset } from '@/shared/utils'
 
 
 const AccountTable = () => {
@@ -100,23 +100,35 @@ const AccountTable = () => {
                             <td>02.01.2024 11:50</td>
                             <td></td>
                             <td>
-                                <button
-                                    id="basic-button"
-                                    aria-controls={ open ? 'basic-menu' : undefined }
-                                    aria-haspopup="true"
+                                <IconButton
+                                    aria-label="more"
+                                    id="long-button"
+                                    aria-controls={ open ? 'long-menu' : undefined }
                                     aria-expanded={ open ? 'true' : undefined }
+                                    aria-haspopup="true"
                                     onClick={ handleClick }
                                 >
                                     <img src={ action } alt="action"/>
-                                </button>
+                                </IconButton>
                                 <Menu
                                     sx={ {
                                         '& .MuiPaper-root ': {
-                                            background: "var(--primary-color)",
-                                            color: "#fff"
+                                            borderRadius:"var(--border-radius)",
+                                            background: "#262729",
+                                            color: "#fff",
+                                            boxShadow: "1px 1px 5px 5px rgba(0, 0, 0, 0.1);",
                                         }
                                     } }
                                     id="basic-menu"
+                                    elevation={ 0 }
+                                    anchorOrigin={ {
+                                        vertical: 'bottom',
+                                        horizontal: 'right',
+                                    } }
+                                    transformOrigin={ {
+                                        vertical: 'top',
+                                        horizontal: 'right',
+                                    } }
                                     anchorEl={ anchorEl }
                                     open={ open }
                                     onClose={ handleClose }
@@ -124,9 +136,24 @@ const AccountTable = () => {
                                         'aria-labelledby': 'basic-button',
                                     } }
                                 >
-                                    <MenuItem onClick={ handleClose }>Profile</MenuItem>
-                                    <MenuItem onClick={ handleClose }>My account</MenuItem>
-                                    <MenuItem onClick={ handleClose }>Logout</MenuItem>
+                                    <MenuItem onClick={ handleClose }>
+                                        <ListItemIcon>
+                                            <img src={ reset } alt="reset"/>
+                                        </ListItemIcon>
+                                        <ListItemText> Reset balance</ListItemText>
+                                    </MenuItem>
+                                    <MenuItem onClick={ handleClose }>
+                                        <ListItemIcon>
+                                            <img src={ edit } alt="edit"/>
+                                        </ListItemIcon>
+                                        <ListItemText> Edit</ListItemText>
+                                    </MenuItem>
+                                    <MenuItem onClick={ handleClose }>
+                                        <ListItemIcon>
+                                            <img src={ Delete } alt="delete"/>
+                                        </ListItemIcon>
+                                        <ListItemText> Delete</ListItemText>
+                                    </MenuItem>
                                 </Menu>
                             </td>
                         </tr>

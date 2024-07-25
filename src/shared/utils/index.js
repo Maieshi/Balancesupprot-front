@@ -19,9 +19,14 @@ import VisibleOff from "./dynamicIcon/visibleOff.jsx";
 import home from './icon/home.svg'
 import ArrowTop from './icon/arrow-top.svg'
 import ArrowDown from './icon/arrow-down.svg'
-
+import Delete from './icon/delete.svg'
+import reset from './icon/reset.svg'
+import edit from './icon/edit.svg'
 
 export {
+    edit,
+    reset,
+    Delete,
     ArrowDown,
     ArrowTop,
     home,
