@@ -5,23 +5,22 @@ import { useState } from "react";
 import { ArrowTop, ArrowDown } from '@/shared/utils'
 
 
-const th = [
-    'Account',
-    'Name',
-    'Balance',
-    'Group',
-    'Device',
-    'Slim sim',
-    'Phone',
-    'Card Numbers',
-    'Bank',
-    'Expenses',
-    'Update at',
-    'Info',
-    'Action'
-]
-
 const AccountTable = () => {
+    const [ th, setTh ] = useState( [
+        {item: 'Account', img: false, default: false},
+        {item: 'Name', img: false, default: false},
+        {item: 'Balance', img: false, default: true},
+        {item: 'Group', img: false, default: false},
+        {item: 'Device', img: false, default: false},
+        {item: 'Slim sim', img: false, default: false},
+        {item: 'Phone', img: false, default: false},
+        {item: 'Card Numbers', img: false, default: false},
+        {item: 'Bank', img: false, default: false},
+        {item: 'Expenses', img: false, default: false},
+        {item: 'Update at', img: false, default: false},
+        {item: 'Info', img: false, default: false},
+        {item: 'Action', img: false, default: false}
+    ] );
     const account = [ 1, 2, 3, 4, 5, 6, 7, 9, 9 ]
 
     const [ anchorEl, setAnchorEl ] = useState( null );
@@ -35,6 +34,27 @@ const AccountTable = () => {
     const handleClose = () => {
         setAnchorEl( null );
     };
+
+    const showArrow = ( index ) => {
+        setTh( prevTh => {
+            const newTh = [ ...prevTh ];
+            if (newTh[index].default === true) {
+                newTh[index].img = true;
+                newTh[index].default = false
+            } else {
+                newTh[index].img = true;
+            }
+            return newTh;
+        } );
+    };
+
+    const hideArrow = ( index ) => {
+        setTh( prevTh => {
+            const newTh = [ ...prevTh ];
+            newTh[index].img = false;
+            return newTh;
+        } );
+    };
     return (
         <>
             <div className='account-table'>
@@ -43,9 +63,14 @@ const AccountTable = () => {
                     <tr>
                         {
                             th.map( ( item, index ) => (
-                                <th key={ index }>
-                                    <img src={ ArrowTop } alt="ArrowTop"/>
-                                    { item }
+                                <th
+                                    key={ index }
+                                    onMouseOver={ () => showArrow( index ) }
+                                    onMouseOut={ () => hideArrow( index ) }
+                                >
+                                    { item.img ? <img src={ ArrowTop } alt="ArrowTop"/> : "" }
+                                    { item.default ? <img src={ ArrowDown } alt="ArrowDown"/> : "" }
+                                    { item.item }
                                 </th>
                             ) )
                         }
