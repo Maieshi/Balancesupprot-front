@@ -52,6 +52,7 @@ const AccountTable = () => {
         setTh( prevTh => {
             const newTh = [ ...prevTh ];
             newTh[index].img = false;
+            newTh[2].default = true
             return newTh;
         } );
     };
