@@ -96,6 +96,10 @@
 }
 
 .add-account-text-area textarea {
+    resize: none;
+}
+
+.add-account-text-area textarea {
     padding: 10px;
     width: 100%;
     border-radius: var(--border-radius);
@@ -129,4 +133,11 @@
         width: 100% !important;
     }
 
+}
+
+@media screen and (max-width: 600px) {
+    .add-account-grid-con {
+        height: 100%;
+        margin-top: 0;
+    }
 }

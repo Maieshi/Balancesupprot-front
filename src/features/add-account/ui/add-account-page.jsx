@@ -1,5 +1,8 @@
 import { Grid, TextField, FormControl, InputLabel, Select, MenuItem } from "@mui/material";
+import { close } from '@/shared/utils'
 import './style.css'
+import { useDispatch } from "react-redux";
+import { openModal } from "@/features/add-account/modal/modal.js";
 
 const sxStyle = {
     borderColor: 'var(--secondary-color)',
@@ -7,11 +10,15 @@ const sxStyle = {
 }
 
 export const AddAccountPage = () => {
+    const dispatch = useDispatch();
     return (
         <Grid container className='add-account-grid-con'>
             <Grid item className='add-account-grid-item'>
                 <div className='add-account-grid-header'>
                     <h4>Add Account</h4>
+                    <button onClick={ () => dispatch( openModal( false ) ) }>
+                        <img src={ close } alt="close"/>
+                    </button>
                 </div>
                 <form>
                     <div className='add-account-form'>

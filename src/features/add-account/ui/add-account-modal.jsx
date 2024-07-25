@@ -5,14 +5,14 @@ import { AddAccountPage } from './add-account-page.jsx'
 
 const sxStyle = {
     width: {
-        xs: "70%",
+        xs: "100%",
         sm: "50%",
         md: "50%",
         lg: '50%',
         xl: '50%'
     },
     left: {
-        xs: '-20%',
+        xs: '-50%',
         sm: 0,
         md: 0,
         lg: 0,
