@@ -6,7 +6,19 @@ import { openModal } from "@/features/add-account/modal/modal.js";
 
 const sxStyle = {
     borderColor: 'var(--secondary-color)',
-    width: '50%'
+    width: '50%',
+    '& .MuiOutlinedInput-root': {
+        borderColor: 'var(--border-color)',
+        color: '#fff',
+        borderRadius: 'var(--border-radius)',
+    },
+    '& .MuiOutlinedInput-notchedOutline': {
+        borderColor: 'var(--border-color)',
+    },
+    '& .Mui-Focused': {
+        color: '#fff',
+        borderColor: 'var(--border-color)'
+    }
 }
 
 export const AddAccountPage = () => {
