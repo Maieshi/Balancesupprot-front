@@ -5,7 +5,7 @@ import { FormControlLabel,Switch} from "@mui/material";
 const IOSSwitch = styled((props) => (
     <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
 ))(({ theme }) => ({
-    width: 42,
+    width:42,
     height: 26,
     padding: 0,
     '& .MuiSwitch-switchBase': {
@@ -55,7 +55,7 @@ const IOSSwitch = styled((props) => (
 
 const Notification = () => {
     return (
-        <div className="tabs-general">
+        <div className="tabs-general-notify">
             <div className="notifications">
                 <div className="notify-text">
                     <h3>Activity</h3>

@@ -5,6 +5,14 @@
     background: var(--primary-color);
 }
 
+.tabs-general-notify {
+    width: 70%;
+    height: auto;
+    padding: 20px;
+    background: var(--primary-color);
+}
+
+
 .tabs-form {
     margin-top: 15px;
     display: flex;
@@ -17,9 +25,11 @@
     align-items: center;
     gap: 50px;
 }
-.notifications:nth-last-child(1){
+
+.notifications:nth-last-child(1) {
     margin-top: 1rem;
 }
+
 .notify-content {
     width: 90%;
     margin-top: 10px;
@@ -35,8 +45,55 @@
 
 }
 
-.notification-item{
+.notification-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 1024px) {
+    .tabs-general-notify {
+        width: 100%;
+    }
+
+    .notify-form {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .notification-item {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tabs-general {
+        width: 100%;
+    }
+
+    .notifications {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .notifications:nth-last-child(1) {
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .tabs-form {
+        flex-direction: column;
+    }
+
+    .notification-item {
+        font-size: 10px;
+    }
+
+    .notification-item .MuiFormControlLabel-root {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
 }
