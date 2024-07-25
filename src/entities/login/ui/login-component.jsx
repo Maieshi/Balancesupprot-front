@@ -9,7 +9,15 @@ const sxStyle = {
     marginTop: "20px",
     '& .MuiOutlinedInput-root': {
         borderColor: 'var(--border-color)',
+        color: '#fff',
         borderRadius: 'var(--border-radius)',
+    },
+    '& .MuiOutlinedInput-notchedOutline': {
+        borderColor: 'var(--border-color)',
+    },
+    '& .Mui-Focused': {
+        color: '#fff',
+        borderColor: 'var(--border-color)'
     }
 }
 
