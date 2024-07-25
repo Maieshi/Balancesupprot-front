@@ -5,7 +5,7 @@ const SettingsHeader = () => {
         <>
             <div className="account-header">
                 <div className='account-header-button'>
-                    <span>Settings</span>
+                    <span>Account</span>
                 </div>
             </div>
         </>

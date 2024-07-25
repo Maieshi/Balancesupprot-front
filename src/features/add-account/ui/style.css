@@ -98,6 +98,7 @@
 .add-account-text-area textarea {
     padding: 10px;
     width: 100%;
+    border-radius: var(--border-radius);
     font-size: 18px;
     font-family: "Nunito", sans-serif;
     background-color: transparent !important;

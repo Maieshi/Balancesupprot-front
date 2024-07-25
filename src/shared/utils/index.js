@@ -10,8 +10,16 @@ import settings from './icon/settings.svg'
 import account from './icon/account.svg'
 import messages from './icon/messages.svg'
 import check from './icon/check.svg'
+import userId from './icon/used-id.svg'
+import notify from './icon/notify.svg'
+import UserId from './dynamicIcon/userId.jsx'
+import NotifyIcon from './dynamicIcon/notifyIcon.jsx'
 
 export {
+    UserId,
+    NotifyIcon,
+    userId,
+    notify,
     menu,
     plus,
     close,

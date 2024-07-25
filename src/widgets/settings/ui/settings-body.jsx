@@ -1,8 +1,11 @@
+import { AddAccountPage } from "@/features/add-account/ui/add-account-page.jsx";
 import './style.css'
 import { useState } from "react";
 import { Box, Tabs, Tab } from "@mui/material";
-import { AddAccountPage } from "@/features/add-account/ui/add-account-page.jsx";
+import General from './tabs/general.jsx'
+import Notification from './tabs/notification.jsx'
 
+import { UserId, NotifyIcon } from '@/shared/utils'
 
 const CustomTabPanel = ( props ) => {
     const {children, value, index, ...other} = props;
@@ -15,7 +18,7 @@ const CustomTabPanel = ( props ) => {
             aria-labelledby={ `simple-tab-${ index }` }
             { ...other }
         >
-            { value === index && <Box sx={ {p: 3} }>{ children }</Box> }
+            { value === index && <Box sx={ {py: 3} }>{ children }</Box> }
         </div>
     );
 }
@@ -44,25 +47,28 @@ const SettingsBody = () => {
                 <Tabs
                     indicatorColor="primary"
                     textColor="inherit"
-                    sx={{
-                       '& .MuiTabs-indicator' : {
-                           background: '#fff',
-                       }
-                    }}
+                    sx={ {
+                        '& .MuiTabs-indicator': {
+                            background: '#fff',
+                        }
+                    } }
                     value={ value }
                     onChange={ handleChange }
                     aria-label="basic tabs example">
-                    <Tab sx={ sxStyle } label="General" { ...ariaProps( 0 ) } />
-                    <Tab sx={ sxStyle } label="Notification" { ...ariaProps( 1 ) } />
+                    <Tab icon={ <UserId/> } iconPosition="start"
+                         sx={ sxStyle } label="General"
+                         { ...ariaProps( 0 ) } />
+                    <Tab icon={ <NotifyIcon/> } iconPosition="start"
+                         sx={ sxStyle } label="Notification"
+                         { ...ariaProps( 1 ) } />
                 </Tabs>
             </Box>
             <CustomTabPanel value={ value } index={ 0 }>
-                <AddAccountPage/>
+                <General/>
             </CustomTabPanel>
             <CustomTabPanel value={ value } index={ 1 }>
-                Item Two
+                <Notification/>
             </CustomTabPanel>
-
         </div>
     );
 };
