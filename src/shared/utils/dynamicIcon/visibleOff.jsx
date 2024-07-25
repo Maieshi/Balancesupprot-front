@@ -1,6 +1,6 @@
 const VisibleOff = () => {
     return (
-        <div>
+        <div style={{color:"var(--border-color)"}}>
             <svg xmlns="http://www.w3.org/2000/svg"  aria-hidden="true"
                  role="img" className="component-iconify MuiBox-root css-1t9pz9x iconify iconify--solar" width="1em"
                  height="1em" viewBox="0 0 24 24">

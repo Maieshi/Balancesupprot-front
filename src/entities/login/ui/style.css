@@ -28,6 +28,21 @@
     color: #fff;
 }
 
-.login-form form{
+.login-form form {
     margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .login-content {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .login-animation {
+        display: none;
+    }
+
+    .login-form {
+        width: 70%;
+    }
 }

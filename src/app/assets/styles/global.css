@@ -17,8 +17,9 @@ body {
 
 :root {
     --primary-color: #1f2021;
-    --secondary-color: #666666;
+    --secondary-color: rgb(99, 115, 129);
     --primary-color-dark: #181818;
+    --border-color: rgb(99, 115, 129);
     --border-radius: 8px;
 }
 
