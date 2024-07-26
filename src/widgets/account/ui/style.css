@@ -259,14 +259,14 @@
 }
 
 .pagination-select select {
-    background: transparent;
+    background: var(--primary-color);
     border: none;
     color: white;
     font-size: 18px;
 }
 
 .pagination-select select option {
-    color: #000;
+    color: white;
 }
 
 .pagination-btn {
@@ -282,6 +282,16 @@
     align-items: center;
     justify-content: center;
     background: transparent;
+}
+
+@media screen and (max-width: 800px) {
+    .message-filter-inputs {
+        flex-direction: column;
+    }
+
+    .message-filter-inputs .MuiFormControl-root {
+        width: 100% !important;
+    }
 }
 
 @media screen and (max-width: 770px) {
@@ -305,7 +315,7 @@
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
     .account-filter {
         padding: 10px;
     }
@@ -331,22 +341,13 @@
     }
 
     .pagination-select select {
-        font-size: 10px;
+        font-size: 15px;
     }
 
     .pagination {
-        padding: 10px;
+        padding: 12px;
         gap: 10px;
-        font-size: 10px;
+        font-size: 11px;
     }
 }
 
-@media screen and (max-width: 800px) {
-    .message-filter-inputs {
-        flex-direction: column;
-    }
-
-    .message-filter-inputs .MuiFormControl-root {
-        width: 100% !important;
-    }
-}

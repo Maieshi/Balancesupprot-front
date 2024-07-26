@@ -9,15 +9,7 @@ import { useState } from "react";
 
 const names = [
     'Oliver Hansen',
-    'Van Henry',
-    'April Tucker',
-    'Ralph Hubbard',
-    'Omar Alexander',
-    'Carlos Abbott',
-    'Miriam Wagner',
-    'Bradley Wilkerson',
-    'Virginia Andrews',
-    'Kelly Snyder',
+    'Van Henry'
 ];
 
 const AccountHeader = () => {
@@ -91,7 +83,7 @@ const AccountHeader = () => {
                             multiple
                             value={ personName }
                             onChange={ handleChange }
-                            input={ <OutlinedInput label="Tag"/> }
+                            input={ <OutlinedInput label="Group"/> }
                             renderValue={ ( selected ) => selected.join( ', ' ) }
                             MenuProps={ {
                                 PaperProps: {
@@ -104,13 +96,13 @@ const AccountHeader = () => {
                         >
                             { names.map( ( name ) => (
                                 <MenuItem key={ name } value={ name }>
-                                    <Checkbox  sx={ {
-                                        '& .MuiSvgIcon-root':{
-                                            fill:"#fff"
+                                    <Checkbox sx={ {
+                                        '& .MuiSvgIcon-root': {
+                                            fill: "#fff"
                                         },
                                         borderColor: "#fff"
                                     } }
-                                               checked={ personName.indexOf( name ) > -1 }/>
+                                              checked={ personName.indexOf( name ) > -1 }/>
                                     <ListItemText primary={ name }/>
                                 </MenuItem>
                             ) ) }
