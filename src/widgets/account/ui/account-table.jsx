@@ -116,11 +116,11 @@ const AccountTable = () => {
                                             borderRadius: "var(--border-radius)",
                                             background: "#262729",
                                             color: "#fff",
-                                            boxShadow: "1px 1px 5px 5px rgba(0, 0, 0, 0.1);",
+                                            boxShadow: "-7px 7px 7px 5px rgba(0, 0, 0, 0.02);",
                                         }
                                     } }
                                     id="basic-menu"
-                                    elevation={ 0 }
+                                    elevation={ 1 }
                                     anchorOrigin={ {
                                         vertical: 'bottom',
                                         horizontal: 'right',

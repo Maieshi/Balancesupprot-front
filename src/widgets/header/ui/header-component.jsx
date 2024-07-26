@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux'
 import { openModal } from "@/features/menu-drawer/modal/modal.js";
 import { useState } from "react";
 import { Menu, MenuItem, Divider } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export const HeaderComponent = () => {
     const dispatch = useDispatch()
@@ -37,7 +38,8 @@ export const HeaderComponent = () => {
                             borderRadius: "var(--border-radius)",
                             background: "var(--primary-color)",
                             color: "#fff",
-                            fontWeight: 700
+                            fontWeight: 700,
+                            boxShadow: "-7px 7px 7px 5px rgba(0, 0, 0, 0.05);",
                         }
                     } }
                     id="basic-menu"
@@ -58,15 +60,18 @@ export const HeaderComponent = () => {
                     } }
                 >
                     <MenuItem>NickName</MenuItem>
-                    <Divider sx={{  borderColor: 'rgb(99, 115, 129)', }} />
+                    <Divider sx={ {borderColor: 'rgb(99, 115, 129)',} }/>
                     <MenuItem onClick={ handleClose }>Home</MenuItem>
                     <MenuItem onClick={ handleClose }>Profile</MenuItem>
                     <MenuItem onClick={ handleClose }>Settings</MenuItem>
-                    <MenuItem onClick={ handleClose } sx={ {color: "red", marginTop: "10px"} }>Logout</MenuItem>
+                    <Link to='/login'>
+                        <MenuItem onClick={ handleClose } sx={ {color: "red", marginTop: "10px"} }>Logout</MenuItem>
+                    </Link>
                 </Menu>
             </header>
             <MenuDrawer/>
         </>
-    );
+    )
+        ;
 };
 

@@ -20,4 +20,9 @@ header .profile {
     border-radius: 50%;
     font-size: 20px;
     font-weight: 600;
+    cursor: pointer;
+}
+
+header .profile:hover {
+    border: 2px solid red;
 }
