@@ -16,6 +16,7 @@ const sxStyle = {
         fill: "var(--secondary-color)",
     },
     '& .MuiOutlinedInput-root': {
+        borderRadius: 'var(--border-radius)',
         '& fieldset': {
             borderColor: 'var(--secondary-color)',
         },
@@ -27,6 +28,22 @@ const sxStyle = {
         },
     }
 }
+const sxInputStyle = {
+    borderColor: 'var(--secondary-color)',
+    '& .MuiOutlinedInput-root': {
+        borderColor: 'var(--border-color)',
+        color: '#fff',
+        borderRadius: 'var(--border-radius)',
+    },
+    '& .MuiOutlinedInput-notchedOutline': {
+        borderColor: 'var(--border-color)',
+    },
+    '& .Mui-Focused': {
+        color: '#fff',
+        borderColor: 'var(--border-color)'
+    }
+}
+
 
 const MessageHeader = () => {
     // const dispatch = useDispatch();
@@ -41,7 +58,7 @@ const MessageHeader = () => {
                 <div className="message-filter-inputs">
                     <TextField id="outlined-basic" label="Search Text" variant="outlined"
                                className='add-account-input'
-                               sx={ {borderColor: 'var(--secondary-color)'} }/>
+                               sx={ sxInputStyle }/>
                     <FormControl className='add-account-select' sx={ sxStyle }>
                         <InputLabel id="demo-simple-select-label">Account</InputLabel>
                         <Select
