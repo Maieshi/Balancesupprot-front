@@ -123,6 +123,15 @@
     overflow: auto;
 }
 
+.control-buttons {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: end;
+}
+
+
 @media screen and (max-width: 768px) {
     .add-account-form {
         flex-direction: column;

@@ -1,8 +1,8 @@
-import { Grid, TextField, FormControl, InputLabel, Select, MenuItem } from "@mui/material";
+import { Grid, TextField, FormControl, InputLabel, Select, MenuItem, Button } from "@mui/material";
+import { openModal } from "@/features/add-account/modal/modal.js";
+import { useDispatch } from "react-redux";
 import { close } from '@/shared/utils'
 import './style.css'
-import { useDispatch } from "react-redux";
-import { openModal } from "@/features/add-account/modal/modal.js";
 
 const sxStyle = {
     borderColor: 'var(--secondary-color)',
@@ -118,6 +118,24 @@ export const AddAccountPage = () => {
                                sx={ sxNumberStyle }/>
                     <div className='add-account-text-area'>
                         <textarea rows="9" placeholder='Additional Info'/>
+                    </div>
+                    <div className='control-buttons'>
+                        <Button sx={ {
+                            borderRadius: "var(--border-radius)",
+                            borderColor:"var(--secondary-color)",
+                            color: 'var(--secondary-color)',
+                            '&:hover': {
+                                borderColor:"var(--secondary-color)",
+                            }
+                        } } variant="outlined">Cansel</Button>
+                        <Button sx={ {
+                            borderRadius: "var(--border-radius)",
+                            bgcolor: "white",
+                            color: "#000",
+                            '&:hover': {
+                                bgcolor: "#fff",
+                            }
+                        } } variant="contained">Save</Button>
                     </div>
                 </form>
             </Grid>
