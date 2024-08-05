@@ -69,9 +69,9 @@ const AccountTable = () => {
                                     onMouseOver={ () => showArrow( index ) }
                                     onMouseOut={ () => hideArrow( index ) }
                                 >
+                                    { item.item }
                                     { item.img ? <img src={ ArrowTop } alt="ArrowTop"/> : "" }
                                     { item.default ? <img src={ ArrowDown } alt="ArrowDown"/> : "" }
-                                    { item.item }
                                 </th>
                             ) )
                         }

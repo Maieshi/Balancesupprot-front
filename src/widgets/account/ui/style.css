@@ -92,63 +92,74 @@
 }
 
 .account-table table thead th {
+    position: relative;
+    width: 100px !important;
     height: 4rem;
-    padding: 15px;
+    padding: 10px 20px;
+    line-height: 40px;
     cursor: pointer;
     color: #bac3ca;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    text-wrap: wrap;
     text-align: start;
-    text-overflow: ellipsis;
-    overflow: hidden;
+}
+
+.account-table table thead th img {
+    position: absolute;
+    top: 30%;
+    left: 0;
+}
+
+.account-table table thead th,
+.account-table table tbody td {
+    font-size: 14px !important;
+    text-wrap: wrap;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .account-table table thead th:nth-child(1),
 .account-table table tbody td:nth-child(1) {
-    width: 77px !important;
+    width: 85px !important;
 }
 
 .account-table table thead th:nth-child(2),
 .account-table table tbody td:nth-child(2) {
-    width: 77px !important;
+    width: 120px !important;
 }
 
 .account-table table thead th:nth-child(3),
 .account-table table tbody td:nth-child(3) {
-    width: 100px !important;
+    width: 92px !important;
 }
 
 .account-table table thead th:nth-child(4),
 .account-table table tbody td:nth-child(4) {
-    width: 63px !important;
+    width: 80px !important;
 }
 
 .account-table table thead th:nth-child(5),
 .account-table table tbody td:nth-child(5) {
-    width: 65px !important;
+    width: 80px !important;
 }
 
 .account-table table thead th:nth-child(6),
 .account-table table tbody td:nth-child(6) {
-    width: 77px !important;
+    width: 95px !important;
 }
 
 .account-table table thead th:nth-child(7),
 .account-table table tbody td:nth-child(7) {
-    width: 77px !important;
+    width: 150px !important;
 }
 
 .account-table table thead th:nth-child(8),
 .account-table table tbody td:nth-child(8) {
-    width: 77px !important;
+    width: 150px !important;
 }
 
 .account-table table thead th:nth-child(9),
 .account-table table tbody td:nth-child(9) {
-    width: 77px !important;
+    width: 120px !important;
 }
 
 .account-table table thead th:nth-child(10),
@@ -158,17 +169,18 @@
 
 .account-table table thead th:nth-child(11),
 .account-table table tbody td:nth-child(11) {
-    width: 100px !important;
+    width: 180px !important;
 }
 
 .account-table table thead th:nth-child(12),
 .account-table table tbody td:nth-child(12) {
-    width: 77px !important;
+    width: 70px !important;
 }
 
 .account-table table thead th:nth-child(13),
 .account-table table tbody td:nth-child(13) {
-    width: 77px !important;
+    width: 100px !important;
+    text-overflow: unset !important;
 }
 
 .account-table table thead,
@@ -293,40 +305,6 @@
         width: 100% !important;
     }
 }
-@media screen and (max-width: 1250px) {
-    .account-table table thead th:nth-child(2),
-    .account-table table tbody td:nth-child(2) {
-        width: 100px !important;
-    }
-
-    .account-table table thead th:nth-child(3),
-    .account-table table tbody td:nth-child(3) {
-        width: 100px !important;
-    }
-
-    .account-table table thead th:nth-child(7),
-    .account-table table tbody td:nth-child(7) {
-        width: 120px !important;
-    }
-
-    .account-table table thead th:nth-child(8),
-    .account-table table tbody td:nth-child(8) {
-        width: 100px !important;
-    }
-    .account-table table thead th:nth-child(9),
-    .account-table table tbody td:nth-child(9) {
-        width: 100px !important;
-    }
-    .account-table table thead th:nth-child(11),
-    .account-table table tbody td:nth-child(11) {
-        width: 120px !important;
-    }
-    .account-table table thead th:nth-child(12),
-    .account-table table tbody td:nth-child(12) {
-        width: 120px !important;
-    }
-}
-
 
 @media screen and (max-width: 770px) {
     .account-filter {
