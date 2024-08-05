@@ -293,6 +293,40 @@
         width: 100% !important;
     }
 }
+@media screen and (max-width: 1250px) {
+    .account-table table thead th:nth-child(2),
+    .account-table table tbody td:nth-child(2) {
+        width: 100px !important;
+    }
+
+    .account-table table thead th:nth-child(3),
+    .account-table table tbody td:nth-child(3) {
+        width: 100px !important;
+    }
+
+    .account-table table thead th:nth-child(7),
+    .account-table table tbody td:nth-child(7) {
+        width: 120px !important;
+    }
+
+    .account-table table thead th:nth-child(8),
+    .account-table table tbody td:nth-child(8) {
+        width: 100px !important;
+    }
+    .account-table table thead th:nth-child(9),
+    .account-table table tbody td:nth-child(9) {
+        width: 100px !important;
+    }
+    .account-table table thead th:nth-child(11),
+    .account-table table tbody td:nth-child(11) {
+        width: 120px !important;
+    }
+    .account-table table thead th:nth-child(12),
+    .account-table table tbody td:nth-child(12) {
+        width: 120px !important;
+    }
+}
+
 
 @media screen and (max-width: 770px) {
     .account-filter {
