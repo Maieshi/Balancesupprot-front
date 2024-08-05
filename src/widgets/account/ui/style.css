@@ -169,7 +169,7 @@
 
 .account-table table thead th:nth-child(11),
 .account-table table tbody td:nth-child(11) {
-    width: 180px !important;
+    width: 150px !important;
 }
 
 .account-table table thead th:nth-child(12),
