@@ -59,6 +59,14 @@
     border: 1px solid #0cd2f7;
 }
 
+.balance-info h3 {
+    font-size: 16px;
+}
+
+.balance-info h4 {
+    font-size: 14px;
+}
+
 .balance-info h5 {
     color: #4d5762;
 }
@@ -234,7 +242,6 @@
     white-space: nowrap;
 }
 
-
 .T span {
     color: #6883ab;
     font-weight: 700;
@@ -294,6 +301,12 @@
     align-items: center;
     justify-content: center;
     background: transparent;
+}
+
+@media screen and (min-width: 1600px) {
+    .account-table table tbody {
+        height: 600px;
+    }
 }
 
 @media screen and (max-width: 800px) {
